@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lord Krishna | Art Product Page</title>
+    <link rel="website icon" href="/src/photos/bg removed.png">
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts - Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" /> 
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playwrite+AU+QLD:wght@100..400&display=swap" rel="stylesheet">
+    
+
+    <style>
+        /* Using a common font for consistency */
+        body {
+            font-family: 'Inter', sans-serif ;
+        }
+        /* Style for the active thumbnail */
+        .thumbnail-active {
+            border-color: #000000; /* Black border for active state */
+        }
+        /* Custom styles for the timeline */
+        .timeline-line {
+            flex-grow: 1;
+            height: 2px;
+            background-color: #E5E7EB; /* gray-200 */
+        }
+        .timeline-point .timeline-circle {
+            background-color: #10B981; /* green-500 */
+            border-color: #10B981;
+        }
+        .timeline-point .timeline-label {
+            color: #1F2937; /* gray-800 */
+        }
+        .timeline-point-pending .timeline-circle {
+            background-color: #E5E7EB; /* gray-200 */
+            border-color: #D1D5DB; /* gray-300 */
+        }
+        .timeline-point-pending .timeline-label {
+             color: #6B7280; /* gray-500 */
+        }
+    </style>
+</head>
+
+<body class="bg-orange-50">
+<header class="bg-orange-50">
+        <nav class="hidden md:flex bg-orange-50 p-2 text-black items-center justify-between">
+        <div class="flex flex-col items-center justify-center flex-grow text-center">
+      <span class="text-2xl font-sans leading-none">Thathva Art Gallery</span>
+      <span class="text-sm font-sans">Where art meets elegance</span>
+    </div>
+
+            <div class="flex space-x-4 px-3">
+                <a href="index.html" class="hover:underline px-2">Home</a>
+                <a href="index.html" class="hover:underline px-2">About</a>
+                <a href="index.html" class="hover:underline px-2">Gallery</a>
+                <a href="tel:+916364255515" class="hover:underline px-2">Contact</a>
+            </div>
+        </div>
+    </nav>
+    </header>
+    <!-- Main Product Section -->
+    <div class="container mx-auto px-4 sm:px-6 lg:px-8 py-8 md:py-12">
+        <div class="bg-white rounded-lg md:rounded-2xl shadow-xl p-4 md:p-8 lg:p-12">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12">
+
+                <!-- Column 1: Product Image Gallery -->
+                <div class="flex flex-col-reverse md:flex-row gap-4">
+                    <!-- Vertical Thumbnails -->
+                    <!-- This section shows how to use multiple local images. -->
+                    <!-- Make sure files like 'artwork-front.jpg' are in the same folder as your HTML file. -->
+                    <div id="thumbnail-gallery" class="flex md:flex-col gap-3 justify-center md:justify-start">
+                        <img src="/src/photos/krishna.jpg" 
+                             alt="Artwork Front View" 
+                             class="w-16 h-16 object-cover rounded-md border-2 cursor-pointer thumbnail-active border-black"
+                             onclick="changeImage('/src/photos/krishna.jpg', this)">
+                        
+                        <img src="/src/photos/krishna.jpg" 
+                             alt="Artwork Angle View" 
+                             class="w-16 h-16 object-cover rounded-md border-2 border-transparent cursor-pointer"
+                             onclick="changeImage('/src/photos/krishna.jpg', this)">
+                        
+                        <img src="/src/photos/krishna.jpg" 
+                             alt="Artwork Detail" 
+                             class="w-16 h-16 object-cover rounded-md border-2 border-transparent cursor-pointer"
+                             onclick="changeImage('/src/photos/krishna.jpg', this)">
+                        
+                        <img src="/src/photos/krishna.jpg" 
+                             alt="Artwork in Frame" 
+                             class="w-16 h-16 object-cover rounded-md border-2 border-transparent cursor-pointer"
+                             onclick="changeImage('/src/photos/krishna.jpg', this)">
+                    </div>
+                    <!-- Main Image -->
+                    <div class="flex-1">
+                        <!-- The initial image should match your first thumbnail -->
+                        <img id="mainImage" 
+                             src="/src/photos/krishna.jpg" 
+                             alt="Lord Krishna Artwork" 
+                             class="w-full h-auto object-contain rounded-lg shadow-md">
+                    </div>
+                </div>
+
+                <!-- Column 2: Product Details -->
+                <div class="flex flex-col">
+                    <!-- Top row: Title and Share Icon -->
+                    <div class="flex justify-between items-start mb-2">
+                        <h1 class="text-2xl md:text-3xl font-bold text-gray-800">Lord Krishna</h1>
+                        <button class="text-gray-500 hover:text-gray-800">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 12v8a2 2 0 002 2h12a2 2 0 002-2v-8m-4-6l-4-4m0 0L8 6m4-4v12" />
+                            </svg>
+                        </button>
+                    </div>
+
+                    <!-- Price and Making Time -->
+                    <p class="text-gray-500 text-sm mb-1">MRP (Inclusive of All Taxes)</p>
+                    <p class="text-3xl font-bold text-gray-900 mb-2">Rs. 6,999.00</p>
+                    <p class="text-green-600 font-semibold mb-6">Making Time: 5-6 days. </p>
+
+                    <!-- Actions: Quantity and Buttons -->
+                    <div class="flex items-center space-x-4 mb-6">
+                        <!-- Quantity Selector -->
+                        <div class="flex items-center border border-gray-300 rounded-md">
+                            <button id="decrease-qty" class="text-gray-600 hover:text-gray-900 px-3 py-2 text-lg font-bold">&minus;</button>
+                            <input id="quantity" type="text" value="1" class="w-12 text-center font-semibold border-l border-r border-gray-300 focus:outline-none">
+                            <button id="increase-qty" class="text-gray-600 hover:text-gray-900 px-3 py-2 text-lg font-bold">&plus;</button>
+                        </div>
+                        <!-- Wishlist Button -->
+                        <button class="p-2 border border-gray-300 rounded-md text-gray-600 hover:bg-gray-100 hover:text-red-500">
+                             <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4.318 6.318a4.5 4.5 0 016.364 0L12 7.636l1.318-1.318a4.5 4.5 0 016.364 6.364L12 20.364l-7.682-7.682a4.5 4.5 0 010-6.364z" />
+                            </svg>
+                        </button>
+                    </div>
+                     <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
+                        <button class="w-full bg-white border-2 border-black text-black font-bold py-3 px-6 rounded-md hover:bg-gray-100 transition-colors">
+                            <a href="tel:+916364255515">Contact</a>
+                        </button>
+                        <button class="w-full bg-white border-2 border-black text-black font-bold py-3 px-6 rounded-md hover:bg-green-500 transition-colors">
+                             <a href="https://wa.me/+9196364255515"><i class="fa-brands fa-whatsapp fa-xl px-2"></i> WhatsApp</a>
+                        </button>
+                    </div>
+
+                    
+                    <!-- Description -->
+                    <div class="text-gray-700 space-y-4 text-sm leading-relaxed">
+                        <p>This breathtaking framed artwork presents Lord Krishna, the epitome of love, compassion, and divine beauty, in a richly detailed embroidered form. Meticulously created by skilled artisans.</p>
+                        <p>Bring the divine presence of Lord Krishna into your home. Order this unique embroidered artwork today.</p>
+                        <p>Discover the artistry of Indian embroidery perfect for spiritual decor.</p>
+                        <p class="font-semibold">Framed artwork size: 19 inch (Width) x 23 inch (Height)</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+<div class="bg-orange-50 py-8">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8 py-8">
+            <h2 class="text-2xl font-bold text-center mb-6">Related Products</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-6">
+                <!-- Repeat this block for each related product -->
+                <div class="max-w-sm rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300">
+                    <img class="w-full" src="/src/photos/venkateshwara.jpg" alt="Related Product">
+                    <div class="p-4">
+                        <h3 class="font-bold text-lg mb-2">Lord Venkateshwara</h3>
+                        <p class="text-gray-700 text-base mb-4">A captivating and beautifully detailed artwork of Lord Venkateshwara, perfect for adding a touch of spiritual serenity to your home.</p>
+                        <button class="px-3 py-2 bg-black text-white rounded-md hover:bg-gray-800 transition-colors"><a href="Lord Venkateshwara.html">View Details</a></button>
+                    </div>
+                </div>
+                <!-- Add more related products as needed -->
+                 <div class="max-w-sm rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300">
+                    <img class="w-full h-72" src="/src/photos/ganesha.jpg" alt="Related Product">
+                    <div class="p-4">
+                        <h3 class="font-bold text-lg mb-2">Lord Ganesha</h3>
+                        <p class="text-gray-700 text-base mb-4">Beautifully handcrafted embroidered artwork of Lord Ganesha, perfect for your home temple or as a divine decor piece. Features intricate zari, bead, and sequin work on a vibrant purple background.</p>
+                        <button class="px-3 py-2 bg-black text-white rounded-md hover:bg-gray-800 transition-colors"><a href="Lord Ganesha.html">View Details</a></button>
+                    </div>
+                </div>
+                <!-- Add more related products as needed -->
+                 <div class="max-w-sm rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300">
+                    <img class="w-full h-72" src="/src/photos/krishna.jpg" alt="Related Product">
+                    <div class="p-4">
+                        <h3 class="font-bold text-lg mb-2">Lord Krishna</h3>
+                        <p class="text-gray-700 text-base mb-4">Experience divine beauty with this stunning embroidered Lord Krishna portrait. An intricately detailed piece of Indian textile art, framed and ready to bring peace to your home.</p>
+                        <button class="px-3 py-2 bg-black text-white rounded-md hover:bg-gray-800 transition-colors"><a href="Lord Krishna.html">View Details</a></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <section>
+            <div id="#Contact">
+                <class class="grid grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 bg-gray-50 py-3 px-6">
+                    <div class="max-w-sm rounded overflow-hidden gap-16 py-3 px-3 ">
+                        <img class="h-60 w-60 object-center px-2 rounded-lg " src="/src/photos/bg removed.png" alt="Logo">
+                        <div class="px-2 py-2">
+                            <div class="font-bold text-xl mb-2 text-left">Thathva Art Gallery</div>
+                        </div>
+                    </div>
+                     <div class="text-center text-black text-2xl">
+                    <div class="px-2 py-2">
+                        <p class="text-lg font-semibold">Customer Services</p>
+                        <p class="text-lg py-2 hover:underline"><a href="index.html">Home</a></p>
+                        <p class="text-lg py-2 hover:underline"><a href="index.html">About</a></p>
+                        <p class="text-lg py-2 hover:underline"><a href="index.html">Our Gallery</a></p>
+                    </div>
+                </div>
+                <div class="text-center text-black text-2xl">
+                    <div class="px-2 py-2">
+                        <p class="text-lg py-2 font-semibold">Connect with us</p>
+                        <a href="https://www.facebook.com/people/Thathva-Gallary/pfbid02uGHtftGEEfd8z4GJX5JLc5BEBvYbQr3SJfd3ZXhvL1DjyeE2SfmqqREnHz3RsrNvl/?rdid=v22pYmxUqIyicqMD&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F1BqeGFZKvU%2F" target="_blank" ><i class="fa-brands fa-facebook"></i></a>
+                        <a href="https://www.instagram.com/thathvas_art_gallery_/?igsh=YjRsZGlmeTVuNXdl#" target="_blank" class="fa-brands fa-instagram px-2"></a>
+                        <a href="mailto:mahiyuva82@gmail.com" class="fa-solid fa-square-envelope px-2"></a>
+                        <p class="text-lg py-2">Phone: <a href="tel:+916364255515">+91 96364255515</a></p>
+                        <p class="text-lg py-2">Email: <a href="mailto:mahiyuva82@gmail.com">mahiyuva82@gmail.com</a></p>
+                    </div>
+                </div>
+                </div>
+                </section>
+                </class>
+                <section class="text-center text-black text-xs py-2 bg-gray-50">
+                    <p>© 2025 Thathva Art Gallery. All rights reserved.</p>
+                </section>
+
+
+    <script>
+        // --- JavaScript for Image Gallery ---
+        function changeImage(src, clickedThumbnail) {
+            // Get the main image element
+            const mainImage = document.getElementById('mainImage');
+            // Change the source of the main image
+            mainImage.src = src;
+            
+            // --- Thumbnail Active State ---
+            // I've updated this selector to be more robust
+            const thumbnails = document.querySelectorAll('#thumbnail-gallery img');
+            // Remove the active class from all thumbnails
+            thumbnails.forEach(thumb => {
+                thumb.classList.remove('thumbnail-active', 'border-black');
+                thumb.classList.add('border-transparent');
+            });
+            
+            // Add the active class to the clicked thumbnail
+            clickedThumbnail.classList.add('thumbnail-active', 'border-black');
+            clickedThumbnail.classList.remove('border-transparent');
+        }
+
+        // --- JavaScript for Quantity Selector ---
+        const quantityInput = document.getElementById('quantity');
+        const decreaseBtn = document.getElementById('decrease-qty');
+        const increaseBtn = document.getElementById('increase-qty');
+
+        decreaseBtn.addEventListener('click', () => {
+            let currentValue = parseInt(quantityInput.value);
+            if (currentValue > 1) {
+                quantityInput.value = currentValue - 1;
+            }
+        });
+
+        increaseBtn.addEventListener('click', () => {
+            let currentValue = parseInt(quantityInput.value);
+            quantityInput.value = currentValue + 1;
+        });
+    </script>
+
+</body>
+</html>
